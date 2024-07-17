@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-stand-blog.css">
     <link rel="stylesheet" href="assets/css/owl.css">
+    
+    <!-- Meu Css -->
+    <link rel="stylesheet" href="./assets/css/Meu Css/LoginCadastro.css">
+
 
   </head>
   <body>
@@ -61,13 +65,14 @@
                 <a class="nav-link" href="post-details.html">Safras</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Análise do Solo</a>
+                <a class="nav-link" href="contact.html">Solo</a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="contact.html">Contato</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><div class="btnLogin">Login</div></a>
+                <!-- <a class="nav-link" href="#"><div class="btnLogin"><button>Login</button></div></a> -->
+                <a class="nav-link" href="#" onclick="ShowLC()"><div class="btnLogin">Login</div></a>
               </li>
             </ul>
           </div>
@@ -111,7 +116,7 @@
                       <h2>Envia sua Mensagem</h2>
                     </div>
                     <div class="content">
-                      <form id="contact" action="" method="post">
+                      <form id="contact" action="#" method="post">
                         <div class="row">
                           <div class="col-md-6 col-sm-12">
                             <fieldset>
@@ -159,9 +164,9 @@
                           <span>Endereço E-mail</span>
                         </li>
                         <li>
-                          <h5>123 Aenean id posuere dui, 
-                          	<br>Praesent laoreet 10660</h5>
-                          <span>STREET ADDRESS</span>
+                          <h5>Angola - Huíla, Lubango, 
+                          	<br>Rua Tchioco Área 5</h5>
+                          <span>Endereço da Cidade</span>
                         </li>
                       </ul>
                     </div>
@@ -181,25 +186,176 @@
         </div>
       </div>
     </section>
+   <!-- ///////////////////////////////////////////////////////////// -->
+    <!-- ** Login e cadastro -->
+    <section class="sectionLoginECadastro">
+      <div id="BtnCLOSE_sectionLoginECadastro">
+        <button type="button" onclick="escoderLC()">x</button>
+      </div>
+      <div id="divsToogsLogin">
+        <!-- /// lados esquerdo -->
+        <div id="logoEmpresaShalAgriTech">
+          <img src="./ShalomAgriTech/mode1.png" alt="Logo Da ShalAgriTech">
+          <!-- <img src="./ShalomAgriTech/ShalAgriTech.png" alt="Logo Da ShalAgriTech"> -->
+        </div>
+        <!-- /// lados direito -->
+        <div id="divFromLoginCadastro">
+          <div id="divFrom">
+          <!-- *** div Login -->
+            <div class="divLoginFrom" id="divLoginFrom">
+              <form action="#">
+                <h1>Login</h1>
+                <div id="dadosEntrada">
+                  <label>Nome da fazenda Ou Email</label>
+                  <input type="text" required>
+                </div>
+                <div id="dadosEntrada">
+                  <label>Senha</label>
+                  <input type="password" required>
+                </div>
+                <div id="RecLembr">
+                  <div id="lembra">
+                    <input type="checkbox" id="lembra-se">
+                    <label for="lembra-se">Lembrar de mim</label>
+                  </div>
+                  <div id="RecuperarSenha">
+                    <button type="button">Esqueceu sua Senha?</button>
+                    <!-- <a href="#">Esqueceu sua Senha?</a> -->
+                  </div>
+                </div>
+                <div id="btns">
+                  <button type="submit" id="enviaL" class="envia">Enviar</button>
+                  <button type="button" id="criarContaL" class="criarConta" onclick="ShowCriarConta()">Criar Conta</button>
+                </div>
+              </form> 
+            </div>
+            <!-- *** Div Criar conta -->
+            <div class="divCriarcontaFrom" id="divCriarcontaFrom">
+              <form action="#">
+                <h1>Criar Conta</h1>
+                <div id="nomeEmailCriarConta">
+                  <div id="dadosEntrada">
+                    <label>Nome da Empresa</label>
+                    <input type="text" required>
+                  </div>
+                  <div id="dadosEntrada">
+                    <label>E-mail@gmail.com</label>
+                    <input type="email" required>
+                  </div>
+                </div>
+                
+                <div id="nomeEmailCriarConta">
+                  <div id="dadosEntrada">
+                    <label>Senha</label>
+                    <input type="text" minlength="6" required>
+                  </div>
+                  <div id="dadosEntrada">
+                    <label>Repetir Senha</label>
+                    <input type="password" required>
+                  </div>
+                </div>
+                
+                <div id="nomeEmailCriarConta">
+                  <div id="dadosEntrada">
+                    <label for="país">País</label>
+                    <select name="país" id="país">
+                      <option value="Angola">Angola</option>
+                      <option value="África do Sul">África do Sul</option>
+                      <option value="Botsuana">Botsuana</option>
+                      <option value="Namíbia">Namíbia</option>
+                      <option value="Timor-Leste">Timor-Leste</option>
+                    </select>
+                  </div>
+                  <div id="dadosEntrada">
+                    <label for="Província">Província</label>
+                    <select name="Província" id="Província">
+                      <option value="Lubango">Huíla</option>
+                      <option value="Bengo">Bengo</option>
+                      <option value="Benguela">Benguela</option>
+                      <option value="Bié">Bié</option>
+                      <option value="Cabinda">Cabinda</option>
+                    </select>
+                  </div>
+                  <div id="dadosEntrada">
+                    <label for="Município">Município</label>
+                    <select name="Município" id="Município">
+                      <option value="Lubango">Lubango</option>
+                      <option value="Matala">Matala</option>
+                      <option value="Menongue">Menongue</option>
+                    </select>
+                  </div>
+                </div>
 
+                <!-- <div id="nomeEmailCriarConta">
+                  <div id="dadosEntrada">
+                    <label for="Produtores de">Produtores de</label>
+                    <select name="Produtores de" id="Produtores de">
+                      <option value="Feijão">Feijão</option>
+                      <option value="Tomate">Tomate</option>
+                      <option value="Cebola">Cebola</option>
+                      <option value="Cenora">Cenora</option>
+                      <option value="Temos Muito">Todo tipo de Legome</option>
+                    </select>
+                  </div>
+                  <div id="dadosEntrada">
+                    <label for="Produtores de">Melhor ano</label>
+                    <select name="Produtores de" id="Produtores de">
+                      <option value="Feijão">Feijão</option>
+                      <option value="Tomate">Tomate</option>
+                      <option value="Cebola">Cebola</option>
+                      <option value="Cenora">Cenora</option>
+                      <option value="Temos Muito">Todo tipo de Legome</option>
+                    </select>
+                  </div>
+                </div> -->
+
+                <div id="nomeEmailCriarConta">
+                  <div id="dadosEntrada">
+                    <label for="Fundada Em">Fundada Em</label>
+                    <input type="date" name="Fundada Em" id="Fundada Em">
+                  </div>
+                  <div id="dadosEntrada">
+                    <label for="logEmpresaCriar">Logo da Empresa</label>
+                    <input type="file" name="logEmpresaCriar" id="logEmpresaCriar">
+                  </div>
+                </div>
+                
+                <div id="btns">
+                  <button type="submit" id="enviaC" class="envia">Criar</button>
+                  <button type="button" id="criarContaC" class="criarConta" onclick="ShowLogin()">Login</button>
+                </div>
+              </form> 
+            </div>
+          </div>
+          <!-- /////////////////////////////////////// -->
+        </div>
+      </div>
+     </section>
+    <!-- ** Fim de Login e cadastro -->
     
+    <!-- Meus Scripts -->
+    <script src="./assets/js/MeuScript/codeLoginCriarConta.js"></script>
+
     <footer>
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
             <ul class="social-icons">
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Behance</a></li>
-              <li><a href="#">Linkedin</a></li>
-              <li><a href="#">Dribbble</a></li>
+              <li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=100075292849269">Facebook</a></li>
+              <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/sabin0.jose/">Instagram</a></li>
+              <li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@Sabino_Jose">YouTube</a></li>
+              <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/03232003?tab=repositories">Github</a></li>
+              <li><a target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@sabino_jose">TikTok</a></li>
+              <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/sabino-jose-089621303/">Linkedin</a></li>
             </ul>
           </div>
           <div class="col-lg-12">
             <div class="copyright-text">
-              <p>Copyright 2020 Stand Blog Co.
+              <p>Copyright 2024 Sabino José
                     
-                 | Design: <a rel="nofollow" href="https://templatemo.com" target="_parent">TemplateMo</a></p>
+                | Design: <a rel="nofollow" href="https://templatemo.com" target="_parent">ShalAgriTech</a></p>
+                <!-- <br> -->
+                <p><a style="color: #9c6a0d;" href="mailto:sabinosatchitumba@gmail.com">sabinosatchitumba@gmail.com</a></p>
             </div>
           </div>
         </div>
